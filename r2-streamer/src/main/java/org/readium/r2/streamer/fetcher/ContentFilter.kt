@@ -18,6 +18,7 @@ import org.readium.r2.shared.publication.epub.EpubLayout
 import org.readium.r2.shared.publication.epub.layout
 import org.readium.r2.shared.publication.presentation.presentation
 import org.readium.r2.streamer.container.Container
+import org.readium.r2.streamer.fetcher.drm.DrmDecoder
 import org.readium.r2.streamer.server.Resources
 import java.io.File
 import java.io.InputStream

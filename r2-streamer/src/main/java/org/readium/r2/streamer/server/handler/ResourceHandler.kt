@@ -43,23 +43,14 @@ class ResourceHandler : RouterNanoHTTPD.DefaultHandler() {
                      session: IHTTPSession?): Response? {
         try {
             if (DEBUG) Timber.v("Method: ${session!!.method}, Uri: ${session.uri}")
-            val fetcher = uriResource!!.initParameter(Fetcher::class.java)
 
+            val fetcher = uriResource!!.initParameter(Fetcher::class.java)
             val filePath = getHref(session!!.uri)
             val link = fetcher.publication.linkWithHref(filePath)!!
             val mediaType = link.mediaType ?: MediaType.BINARY
 
-            // If the content is of type html return the response this is done to
-            // skip the check for following font deobfuscation check
-            if (mediaType.isHtml) {
-                return serveResponse(session, fetcher.dataStream(filePath), mediaType.toString())
-            }
-
-            // ********************
-            //  FONT DEOBFUSCATION
-            // ********************
-
             return serveResponse(session, fetcher.dataStream(filePath), mediaType.toString())
+
         } catch (e: Exception) {
             if (DEBUG) Timber.e(e)
             return newFixedLengthResponse(Status.INTERNAL_ERROR, mimeType, ResponseStatus.FAILURE_RESPONSE)
