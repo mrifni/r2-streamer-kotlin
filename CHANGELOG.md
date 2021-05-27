@@ -2,9 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-**Warning:** Features marked as *experimental* may change or be removed in a future release without notice. Use with caution.
+**Warning:** Features marked as *alpha* may change or be removed in a future release without notice. Use with caution.
 
 ## [Unreleased]
+
+### Added
+
+* EPUB publications implement a `SearchService` to search through the content.
+
+
+## [2.0.0]
+
+### Added
+
+* `Streamer` takes a new optional `HttpClient` dependency to handle HTTP requests.
+
+
+## [2.0.0-beta.2]
 
 ### Added
 
@@ -16,6 +30,7 @@ All notable changes to this project will be documented in this file.
 
 * The HTTP server now requests that publication resources are not cached by browsers.
   * Caching poses a security risk for protected publications.
+
 
 ## [2.0.0-beta.1]
 
@@ -52,7 +67,7 @@ All notable changes to this project will be documented in this file.
   * Get the visible position from the current `Locator` with `locations.position`.
   * The total number of positions can be retrieved with `publication.positions().size`. It is a suspending function because computing positions the first time can be expensive. 
 * `ReadiumWebPubParser` to parse all Readium Web Publication profiles, including [Audiobooks](https://readium.org/webpub-manifest/extensions/audiobook.html), [LCP for Audiobooks](https://readium.org/lcp-specs/notes/lcp-for-audiobooks.html) and [LCP for PDF](https://readium.org/lcp-specs/notes/lcp-for-pdf.html). It parses both manifests and packages.
-* (*Experimental*) `PDFParser` to parse single PDF documents.
+* (*alpha*) `PDFParser` to parse single PDF documents.
   * The PDF parser is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid/), which may increase the size of your apps. Please open an issue if this is a problem for you, as we are considering different solutions to fix this in a future release.
 
 ### Changed
@@ -81,4 +96,6 @@ server.loadCustomResource(assets.open("scripts/highlight.js"), "highlight.js", I
 [2.0.0-alpha.1]: https://github.com/readium/r2-streamer-kotlin/compare/1.1.5...2.0.0-alpha.1
 [2.0.0-alpha.2]: https://github.com/readium/r2-streamer-kotlin/compare/2.0.0-alpha.1...2.0.0-alpha.2
 [2.0.0-beta.1]: https://github.com/readium/r2-streamer-kotlin/compare/2.0.0-alpha.2...2.0.0-beta.1
+[2.0.0-beta.2]: https://github.com/readium/r2-streamer-kotlin/compare/2.0.0-beta.1...2.0.0-beta.2
+[2.0.0]: https://github.com/readium/r2-streamer-kotlin/compare/2.0.0-beta.2...2.0.0
 
