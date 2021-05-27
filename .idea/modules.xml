@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/r2-streamer-kotlin.iml" filepath="$PROJECT_DIR$/.idea/r2-streamer-kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/299808576/r2-streamer-kotlin.r2-shared.iml" filepath="$PROJECT_DIR$/.idea/modules/299808576/r2-streamer-kotlin.r2-shared.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/r2-streamer/r2-streamer-kotlin.r2-streamer.iml" filepath="$PROJECT_DIR$/.idea/modules/r2-streamer/r2-streamer-kotlin.r2-streamer.iml" />
     </modules>
   </component>
